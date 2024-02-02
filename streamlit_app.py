@@ -42,8 +42,9 @@ if upload_img is not None:
     input_image = Image.open( upload_img )
     #input_image = Image.open(user_image.read(), encoding="utf-8")
 
-    #Want to replace input image so as not to take up space with each new one 
-    input_image.save("images/content-images/userinput.png")
+    #Want to replace input image so as not to take up space with each new one
+    image_path=os.path.join('images/content-images','userinput.png')
+    input_image.save(image_path)
     st.image(input_image, caption='Your Image', use_column_width=True)
 
     #st.write( 'image name: ', user_image.name)
